@@ -12,18 +12,7 @@
 </template>
 
 <style lang='less' scoped>
-:deep(.testBtn){
-.el-button{
-    background-color: rgb(82, 183, 200);
-    width: 100px;
-  }
-}
-/deep/ .testBtn{
-  .el-button{
-    background-color: rgb(60, 35, 185);
-  }
-}
-::v-deep .testBtn{
+:deep( .testBtn){
   .el-button{
     background-color: rgb(120, 184, 120);
   }
