@@ -1,19 +1,29 @@
 <script setup lang="ts">
+const dialogVisible = ref(false)
+const setDialogVisible = () => {
+  dialogVisible.value = !dialogVisible.value
+}
 </script>
 
 <template>
-  <div>
-    <div class="testBtn">
+  <DefineTemplate>
+    <div class="testBtn" @click="setDialogVisible">
       <el-button>
-        Success
+        {{ dialogVisible ? 'success' : 'error' }}
       </el-button>
     </div>
+  </DefineTemplate>
+  <div v-if="dialogVisible">
+    <ReuseTemplate />
+  </div>
+  <div v-else>
+    <ReuseTemplate />
   </div>
 </template>
 
 <style lang='less' scoped>
-:deep( .testBtn){
-  .el-button{
+:deep(.testBtn) {
+  .el-button {
     background-color: rgb(120, 184, 120);
   }
 }
