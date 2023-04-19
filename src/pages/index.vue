@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { DefineTemplate, ReuseTemplate } from 'vue-reuse-template';
 const dialogVisible = ref(false)
 const setDialogVisible = () => {
   dialogVisible.value = !dialogVisible.value
